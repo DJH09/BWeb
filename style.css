@@ -1,40 +1,26 @@
-body{
 /* Base styles */
 body {
     margin: 0;
     padding: 0;
 }
-@@ -7,114 +8,100 @@ html, body {
+
+html, body {
     height: 100%;
 }
 
-.wrapper{
 .wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(90deg, rgba(2, 0, .6, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     background: linear-gradient(90deg, rgba(2, 0, 153, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
-.container {display: inline-block;}
-@keyframes cursor {
-    50% {border-color: transparent}
-}
-@keyframes typing {
-    from {width: 0}
-    to {width: 100%;}
-}
-h2{
-    font-family: poppins;
 /* Centered text with typewriter effect */
 h2 {
     font-family: 'Poppins', sans-serif;
     position: absolute;
     top: 50%;
-    left: 30%;
-    transform: translate(-30%, - 50%);
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 50px;
@@ -42,20 +28,14 @@ h2 {
     color: white;
     text-transform: uppercase;
     margin: 0;
-    overflow: hidden; /* Essential for typewriter effect */
-    white-space: nowrap; /* Prevents text from wrapping */
-    border-right: 3px solid white; /* Creates the cursor effect */
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid white;
     animation:
-        typing 4s steps(26),
-        cursor .8s step-end infinite alternate;
         typing 2s steps(26) forwards,
         cursor .4s step-end infinite alternate;
 }
 
-.box div{
 /* Responsive boxes with animations */
 .box div {
     position: absolute;
@@ -63,60 +43,9 @@ h2 {
     height: 60px;
     background-color: transparent;
     border: 6px solid white;
-}
-.box div:nth-child(1){
-    top: 12%;
-    left: 42%;
     animation: animate 10s linear infinite;
-}
-.box div:nth-child(2){
-    top: 70%;
-    left: 50%;
-    animation: animate 7s linear infinite;
-}
-.box div:nth-child(3){
-    top: 17%;
-    left: 6%;
-    animation: animate 9s linear infinite;
-}
-.box div:nth-child(4){
-    top: 20%;
-    left: 60%;
-    animation: animate 10s linear infinite;
-}
-.box div:nth-child(5){
-    top: 67%;
-    left: 10%;
-    animation: animate 6s linear infinite;
-}
-.box div:nth-child(6){
-    top: 80%;
-    left: 70%;
-    animation: animate 12s linear infinite;
-}
-.box div:nth-child(7){
-    top: 60%;
-    left: 80%;
-    animation: animate 15s linear infinite;
-}
-.box div:nth-child(8){
-    top: 32%;
-    left: 25%;
-    animation: animate 16s linear infinite;
-}
-.box div:nth-child(9){
-    top: 90%;
-    left: 25%;
-    animation: animate 9s linear infinite;
-}
-.box div:nth-child(10){
-    top: 20%;
-    left: 80%;
-    animation: animate 5s linear infinite;
 }
 
-@keyframes animate{
-    0%{
 .box div:nth-child(1) { top: 12%; left: 42%; animation-duration: 10s; }
 .box div:nth-child(2) { top: 70%; left: 50%; animation-duration: 7s; }
 .box div:nth-child(3) { top: 17%; left: 6%; animation-duration: 9s; }
@@ -127,25 +56,28 @@ h2 {
 .box div:nth-child(8) { top: 32%; left: 25%; animation-duration: 16s; }
 .box div:nth-child(9) { top: 90%; left: 25%; animation-duration: 9s; }
 .box div:nth-child(10) { top: 20%; left: 80%; animation-duration: 5s; }
+
 /* Keyframes */
 @keyframes animate {
     0% {
         transform: scale(0) translateY(0) rotate(0);
         opacity: 1;
     }
-    100%{
     100% {
         transform: scale(1.3) translateY(-90px) rotate(360deg);
         opacity: 0;
     }
 }
+
 @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
 }
+
 @keyframes cursor {
     50% { border-color: transparent; }
 }
+
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     h2 {
@@ -154,16 +86,19 @@ h2 {
         left: 50%;
         transform: translate(-50%, -40%);
     }
+
     .box div {
         width: 40px; /* Smaller box sizes on mobile */
         height: 40px;
         border-width: 4px; /* Thinner borders */
     }
 }
+
 @media (max-width: 480px) {
     h2 {
         font-size: 24px; /* Smaller font size for very small screens */
     }
+
     .box div {
         width: 30px; /* Further reduce box size for very small screens */
         height: 30px;
