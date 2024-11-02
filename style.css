@@ -32,12 +32,26 @@ h2 {
     color: white;
     text-transform: uppercase;
     margin: 0;
-    white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid white;
     animation:
         typing 2s steps(26) forwards,
         cursor .4s step-end infinite alternate;
+    max-width: 90%; /* Constrain width for large screens */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 32px; /* Adjusted font size for smaller screens */
+        white-space: nowrap; /* Prevent line breaks on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 24px; /* Smaller font size for very small screens */
+    }
 }
 
 /* Responsive boxes with animations */
@@ -80,29 +94,4 @@ h2 {
 
 @keyframes cursor {
     50% { border-color: transparent; }
-}
-
-/* Responsive adjustments for mobile */
-@media (max-width: 768px) {
-    h2 {
-        font-size: 32px; /* Adjusted font size for smaller screens */
-    }
-
-    .box div {
-        width: 40px; /* Smaller box sizes on mobile */
-        height: 40px;
-        border-width: 4px; /* Thinner borders */
-    }
-}
-
-@media (max-width: 480px) {
-    h2 {
-        font-size: 24px; /* Smaller font size for very small screens */
-    }
-
-    .box div {
-        width: 30px; /* Further reduce box size for very small screens */
-        height: 30px;
-        border-width: 3px;
-    }
 }
