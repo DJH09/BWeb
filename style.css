@@ -22,7 +22,7 @@ h2 {
     position: absolute;
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Keep centered on both axes */
+    transform: translate(-70%, -50%); /* Keep centered on both axes */
     font-size: 100px;
     font-weight: bold;
     color: white;
@@ -79,9 +79,9 @@ h2 {
 }
 
 /* Responsive adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     h2 {
-        font-size: 32px; /* Adjusted font size for smaller screens */
+        font-size: 30px; /* Adjusted font size for smaller screens */
     }
 
     .box div {
