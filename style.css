@@ -21,8 +21,8 @@ h2 {
     font-family: 'Poppins', sans-serif;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 30%;
+    transform: translate(-30%, -50%);
     font-size: 50px;
     font-weight: bold;
     color: white;
@@ -83,8 +83,8 @@ h2 {
     h2 {
         font-size: 32px; /* Adjusted font size for smaller screens */
         top: 40%; /* Adjusted position for better centering */
-        left: 50%;
-        transform: translate(-50%, -40%);
+        left: 60%;
+        transform: translate(-60%, -40%);
     }
 
     .box div {
